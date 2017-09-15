@@ -13,9 +13,9 @@
 </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript">
 </script>
-  <script src="../resources/lib/vue.js" type="text/javascript">
+  <script src="./resources/lib/vue.js" type="text/javascript">
 </script>
-  <link rel="stylesheet" type="text/css" href="../resources/styles/styles.css">
+  <link rel="stylesheet" type="text/css" href="./resources/styles/styles.css">
 </head>
 
 <body>
@@ -38,21 +38,22 @@
   </div><!-- First Container -->
 
   <div class="container-fluid bg-1 text-center">
-    <h3 class="margin">Who Am I?</h3><img src="../resources/images/yo.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350" />
+    <h3 class="margin">Who Am I?</h3><img src="./resources/images/yo.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350" />
 
-    <h3>I'm an adventurer</h3>
+    <h3>Sofware Developer</h3>
   </div><!-- Second Container -->
 
-  <div class="container-fluid bg-2 text-center" id="app">
+  <div class="container-fluid bg-2 text-center" id="intro">
     <h3 class="margin">What Am I?</h3>
 
-    <p>my name is {{name}}</p><a href="#" class="btn btn-default btn-lg">Search</a>
-  </div><!-- Third Container (Grid) -->
+    <p>my name is {{user.name}}</p><a href="#" class="btn btn-default btn-lg">Search</a>
+  </div><!-- Third Container (Grid) --> 
 
-  <div class="container-fluid bg-3 text-center">
+  <div class="container-fluid bg-3 text-center" id="findMe">
     <h3 class="margin">Where To Find Me?</h3><br />
+    {{user.email}}
 
-    <div class="row">
+   <!--  <div class="row">
       <div class="col-sm-4">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image" /></div>
 
@@ -61,11 +62,11 @@
 
       <div class="col-sm-4">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image" /></div>
-    </div>
+    </div> -->  
   </div><!-- Footer -->
 
   <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p><!-- test vue js code -->
-  <script type="text/javascript" src="./controllers/ctrIndex.js">
+  <script type="text/javascript" src="controllers/ctrIndex.js">
 
   </script>
 </body>
