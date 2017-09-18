@@ -1,15 +1,38 @@
 // controller.js = Luis Hidalgo de Tena
-var app = new Vue(
-    {
-        el : '#intro',
-        data :
+
+data =
         {
             user :
             {
-                name : "Luis Hidalgo de Tena"
-                email: "luishidalgodetena@gmail.com"
+                name : "Luis",
+                email: "@gmail.com"
             }
         }
-    }
-    )
-findMe
+var app = new Vue(
+    {
+        el : '#intro',
+        data : data,
+        methods:{
+            getUsers: function(){
+                axios.get("http://127.0.0.1:5657/person")
+                .then(response =>{
+                    this.data=response.data;
+                })
+            }
+        },
+        computed : {
+            name: function(){
+                return axios.get("http://127.0.0.1:5657/person/name")
+                    .then(response =>{
+                    return response.data;
+                    })
+            }
+        }
+})
+var app2 = new Vue(
+    {
+        el : '#findMe',
+        data :data
+
+})
+
